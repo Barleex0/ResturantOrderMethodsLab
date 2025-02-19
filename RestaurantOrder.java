@@ -12,24 +12,26 @@ public class RestaurantOrder {
     }
  
     // Method to get the price of an item based on selection
-    public static double getItemPrice(int itemNumber) {
+    public static double getItemPrice(int itemNumber){
         switch(itemNumber){
             case 1:
                 return 5.99;
-                break;
+                
 
             case 2:
                 return 8.99;
-                break;
+                
 
             case 3:
                 return 4.99;
-                break;
+                
 
             case 4:
                 return 1.99;
-                break;
+                
+            default: return 0.0;
         }
+        
     }
  
     // Method to take an order from the user
