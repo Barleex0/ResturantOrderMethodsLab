@@ -43,7 +43,7 @@ public class RestaurantOrder {
             int choice = scanner.nextInt();
             if (choice == 0) break;
             
-            totalCost += itemNumber(choice);
+            totalCost += getItemPrice(choice);
         }
  
         System.out.println("Total will be" + calculateTotal(totalCost));
@@ -58,7 +58,7 @@ public class RestaurantOrder {
  
     public static double calculateTotal(double totalCost, double discount) {
         if (discount >=1){ discount = discount/100;}
-        return totalCost-(totalcost*discount);
+        return totalCost-(totalCost*discount);
     }
  
     // Main method to run the program
