@@ -13,8 +13,23 @@ public class RestaurantOrder {
  
     // Method to get the price of an item based on selection
     public static double getItemPrice(int itemNumber) {
-        // TODO: Implement logic to return the price based on itemNumber
-        return 0.0;
+        switch(itemNumber){
+            case 1:
+                return 5.99;
+                break;
+
+            case 2:
+                return 8.99;
+                break;
+
+            case 3:
+                return 4.99;
+                break;
+
+            case 4:
+                return 1.99;
+                break;
+        }
     }
  
     // Method to take an order from the user
@@ -28,21 +43,22 @@ public class RestaurantOrder {
             int choice = scanner.nextInt();
             if (choice == 0) break;
             
-            // TODO: Call getItemPrice() and update totalCost
+            totalCost += itemNumber(choice);
         }
  
-        // TODO: Display total cost
+        System.out.println("Total will be" + calculateTotal(totalCost));
     }
  
     // Overloaded method to apply a discount
     public static double calculateTotal(double totalCost) {
-        // TODO: Implement method to return total cost
+        // TODO: Implement method to return total cost 
+        // ??? I have no idea what you want from me here this is just a direct return
         return totalCost;
     }
  
     public static double calculateTotal(double totalCost, double discount) {
-        // TODO: Implement method to return total cost after discount
-        return totalCost;
+        if (discount >=1){ discount = discount/100;}
+        return totalCost-(totalcost*discount);
     }
  
     // Main method to run the program
